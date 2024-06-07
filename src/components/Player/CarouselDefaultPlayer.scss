@@ -1,0 +1,257 @@
+.widget-wrap {
+    position: relative;
+
+    & p {
+        margin-left: 68px;
+        font-family: Inria Sans;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 19.86px;
+        text-align: left;
+        color: #3F3837;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: 768px) {
+            margin-left: 17px;
+        }
+    }
+
+    & .title {
+        position: absolute !important;
+        bottom: 0;
+        color: red !important;
+        left: 0;
+        z-index: 999;
+
+        & p {
+            color: #ffffff;
+            margin-left: 20px !important;
+            font-family: Inria Sans;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.79px;
+            text-align: left;
+            text-transform: lowercase;
+        }
+
+        & h1 {
+            color: #ffffff;
+            margin-left: 20px !important;
+            margin-bottom: 23px;
+            font-family: Inria Sans;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 21.58px;
+            text-align: left;
+        }
+    }
+
+    .arrow-r {
+        @media only screen and (max-width: 768px) {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            top: calc(50% - 40px);
+            right: 0;
+            background-color: transparent;
+
+        }
+
+        & img {
+            position: absolute;
+            right: 10%;
+            top: 40%;
+            // transform: translateY(-50%);
+            background-color: #ffffff;
+            border-radius: 50%;
+            z-index: 999;
+            cursor: pointer;
+
+            @media only screen and (min-width: 768px) {
+                right: 1% !important;
+                top: 50% !important;
+            }
+        }
+    }
+
+    .arrow-l {
+        @media only screen and (max-width: 768px) {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            top: calc(50% - 40px);
+            left: 0;
+            z-index: 9;
+            background-color: transparent;
+        }
+
+        & img {
+            position: absolute;
+            left: 10%;
+            top: 40%;
+            // transform: translateY(-50%);
+            border-radius: 50%;
+            background-color: #ffffff !important;
+            z-index: 999;
+            cursor: pointer;
+
+            @media only screen and (min-width: 768px) {
+                left: 1% !important;
+                top: 50% !important;
+            }
+        }
+    }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>.Normal PLayer
+.Video-player-class {
+    width: 375px;
+    height: 205px;
+    object-fit: fill;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+
+    @media only screen and (max-width: 576px) {
+        width: 300px;
+        height: 180px;
+    }
+    &:before{
+        position: absolute;
+        background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+        width: 375px;
+        height: 205px;
+    }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Story Player
+.Video-player-class-story {
+    width: 241px !important;
+    height: 410px !important;
+    object-fit: fill;
+    border-radius: 4px;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Normal player wrapper
+.Video-player-class-wrap {
+    position: relative;
+    width: 375px !important;
+    max-height: 205px !important;
+    padding-right: 5.3px;
+    border-radius: 4px;
+    overflow: hidden;
+    
+    @media only screen and (max-width: 576px) {
+        width: 300px !important;
+        height: 180px !important;
+        padding-right: 5.3px;
+    }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+.Video-player-class-story-wrap {
+    position: relative;
+    width: 241px !important;
+    max-height: 410px !important;
+    padding-right: 5.3px;
+    border-radius: 4px;
+    overflow: hidden;
+    
+}
+
+.Video-player-class-wrap .player_controls .btn-play {
+    position: absolute;
+    top: 77.5px;
+    left: 162.5px;
+    color: white;
+    object-fit: fill;
+    max-width: 50px;
+    max-height: 50px;
+    @media only screen and (max-width: 576px) {
+        top: 65px;
+        left: 125px;
+    }
+
+    img {
+        max-width: 50px;
+    }
+
+}
+.Video-player-class-wrap .player_controls .btn-fullscreen{
+    position:absolute;
+    top: 160.5px;
+    right: 25.5px;
+    max-width: 15px;
+    cursor: pointer;
+    @media only screen and (max-width: 576px) {
+        top: 135.5px;
+    }
+}
+
+.Video-player-class-story-wrap .player_controls .btn-play {
+    position: absolute;
+    top: 180px;
+    left: 95.5px;
+    object-fit: fill;
+    max-width: 50px;
+    max-height: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    img {
+        object-fit: fill;
+        max-width: 50px;
+    }
+}
+.Video-player-class-story-wrap .player_controls .btn-fullscreen{
+    position:absolute;
+    top: 370.5px;
+    right: 25.5px;
+    max-width: 15px;
+    cursor: pointer;
+}
+video::-internal-media-controls-overlay-cast-button {
+    display: none;
+}
+
+.Video-player-class-wrap .video_loader{
+    display: inline-block;
+    z-index: 2147483647;
+    position: absolute;
+    top: 85px;
+    left: 162.5px;
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #B14A49; /* Blue */
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    animation: spin 2s linear infinite;
+    @media only screen and (max-width: 576px) {
+        top: 72.5px;
+        left: 125px;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}
+
+.Video-player-class-story-wrap .video_loader{
+    position: absolute;
+    display: inline-block;
+    top: 187.5px;
+    left: 95.5px;
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #B14A49; /* Blue */
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    animation: spin 2s linear infinite;
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}

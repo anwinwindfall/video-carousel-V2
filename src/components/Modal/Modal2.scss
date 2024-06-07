@@ -1,0 +1,78 @@
+/* The Modal (background) */
+.video-modal-wrap {
+    display: block;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 999;
+    padding-top: 50px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: visible;
+    /* Enable scroll if needed */
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, .9);
+    /* Black w/ opacity */
+    display: flex;
+
+    & .close {
+        color: black;
+        float: right;
+        font-size: 34px;
+        font-weight: bold;
+        top: 20%;
+        position: fixed;
+        // padding-top: 67px;
+        left: 22%;
+        top: 40%;
+
+        &:hover {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        &:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    }
+
+    & .modal-video-content {
+        background-color: transparent;
+        margin: auto;
+        width: 80%;
+        border-radius: 8px;
+
+        // &:before {
+        //     color: #000;
+        //     content: "x";
+        //     float: right;
+        //     font-size: 34px;
+        //     font-weight: 700;
+        //     position: fixed;
+        //     /* top: 0; */
+        //     margin-top: -60px;
+        //     left: 37%;
+
+        //     &:hover {
+        //         color: #000;
+        //         text-decoration: none;
+        //         cursor: pointer;
+        //     }
+
+            &:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+
+    }

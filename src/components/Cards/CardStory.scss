@@ -1,0 +1,26 @@
+.cards-story_wrap{
+    width: 246px;
+    height: 410px;
+    padding-right: 5.3px !important;
+
+    & .cards-story-container{
+        width: 241px;
+        height: 410px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    & .btn-play {
+        background-repeat: no-repeat;
+        height: 50px;
+        left: calc(50% - 27px);
+        position: absolute;
+        top: calc(50% - 27px);
+        width: 50px;
+        z-index: 999;
+        cursor: pointer;
+        img{
+            object-fit: fill;
+        }
+    }
+
+}

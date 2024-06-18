@@ -1,13 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import leftangle from '../../images/leftangle.svg'
 import rightangle from '../../images/rightangle.svg'
-import CarouselDefaultPlayer from '../Player/CarouselDefaultPlayer'
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/scss/alice-carousel.scss";
 import "./CarouselDefault.scss";
-import Shimmer from '../Shimmer/Shimmer';
 import Card from '../Cards/CardDefault';
 import CardStory from '../Cards/CardStory';
+import './CarouselDefaultPlayer.scss'
 
 const CarouselDefault = ({videos, type, responsive, heading}) => {
   const carouselRef= useRef(null)
@@ -64,7 +63,7 @@ const CarouselDefault = ({videos, type, responsive, heading}) => {
     <div className='widget-wrap'>
       <p>{heading}</p>
       {currentIndex>=1&&(<div className='arrow-l' onClick={slidePrev}>
-        <img src={leftangle} />
+        <img alt='previous button' loading='lazy' src={leftangle} />
       </div>)}
       <div className={`${type=="story"?'carousel-wrapper-story':'carousel-wrapper'}`} >
       <AliceCarousel
@@ -82,7 +81,7 @@ const CarouselDefault = ({videos, type, responsive, heading}) => {
       />
       </div>
       {hideRightArrow()&&(<div className='arrow-r' onClick={slideNext}>
-        <img src={rightangle}/>
+        <img alt='Next button' loading='lazy' src={rightangle}/>
       </div>)}
       {/* {console.log(currentIndex, "currentIndex")} */}
     </div>

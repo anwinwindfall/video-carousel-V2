@@ -10,9 +10,9 @@ const {handlePlay, setBlobVideoUrl} = useContext(context)
     <div className='cards-wrapper'>
       <div className='cards-container'>
         <div onClick={()=>handlePlay(url)} className='btn-play'>
-          <img src='https://143223961.fs1.hubspotusercontent-eu1.net/hubfs/143223961/raw_assets/public/Assets/Eucharistic%20Revival/play.svg' />
+          <img alt='play button' loading='lazy' src='https://143223961.fs1.hubspotusercontent-eu1.net/hubfs/143223961/raw_assets/public/Assets/Eucharistic%20Revival/play.svg' />
         </div>
-        <img src={poster.src} />
+        <img src={poster.src} loading='lazy' alt={poster.alt}/>
         <div className='title'>
           {/* <p>{`2 mins watch`}</p> */}
           <h1>{title && title}</h1>
